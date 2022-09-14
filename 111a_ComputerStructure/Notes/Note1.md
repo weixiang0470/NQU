@@ -13,3 +13,5 @@
     - Can use the command `ls -l` to check the permission of the file. ex: ![ls-l](Images/ls-l.png)
     - *All the operations need to be under the file "nand2tetris/tools"*
 - After that use the command `./HardwareSimulator.sh` to execute the file. Now you will see ![HSMenu](Images/HardwareSimulatorMenu.png) and able to test your program.
+
+_*Use "File -> Load Script" to test your program~*_

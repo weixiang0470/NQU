@@ -20,10 +20,45 @@
     5. TFTP Server...
     - 1~4 is needed others are chooices.
 - DORA
-    - Discover : Client send packet to discover DHCP server.
-    - Offer : Servers send offer packet to client, normally use the first offer packet, other servers will know been rejected and take back the packet.
+    - Discover : Client send packet through broadcast to discover DHCP server.
+    - Offer : Servers send offer packet to client, normally use the first/fastest offer packet, other servers will know been rejected and take back the packet.
     - Request : Client send request packet to server 
     - Acknowledge : Server send ack packet to client when received request packet
+## **DNS**
+- For transaction between Domain Name and IP Address
+    - use DN check IP , Forward Name Query
+    - use IP check DN , Backward Name Query
+- 53 port
+- UDP 
+    - Cause need as fast as possible, if failed/lost packet then ask again 
+    - Not secure, packet easy to been block on the way. Ex: hacker block the DNS packet and send fake website/ip/message.
+- Applications of DNS:
+    - DDOS attack: send small packet, come back with big packet.
+         ![DDOS](Images/Week2.DDOS.png)
+    - CDN
+        - Content Delivery Network
+        - Resources important, where is not important
+        - In advance setting of DNS, it can give different response by different IP address
+        - Ex: Youtube have different branches around the world, Asian centre, Australia centre....
+- Steps of checking DN to IP
+    1. hosts
+        - Windows
+            - Windows\System32\drivers\etc
+        - Linux 
+            - /etc/hosts
+    2. cache
+        - `ipconfig/displaydns` to show cache
+        - `ipconfig/flushdns` to delete cache
+    3. DNS server
+## **FQDN**
+- Fully Qualified Domain Name
+- Max: 5 floors. Each floor at least 2 char, max 63 char. Maximum total length is 253 char.
+- Host Name, Domain Name, Root Domain
+    - Ex: `www.flag.com.tw.` : `www` is host name, `.flag.com.tw` is domain name, `.` is root domain.(machine start from right side)
+- Root domain is the topest level
+    - TLD(Top-Level Domain): Under root domain, gTLD(Generic TLD) for different organizations, ccTLD(Country Code TLD) for different countries.**US:edu,UK:ac**
+    - Ex: `. -> tw -> edu -> ntu -> ee -> www` == `www.ee.ntu.edu.tw`
+****
 ## **Extra**
 ### **NAT**
 - **DNAT**

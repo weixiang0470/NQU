@@ -90,27 +90,29 @@
 _**http 80 port, https 443 port**_
 ## **TCP**
 - When building connection => Three Way Handshake
-
 ![ThreeWayHandshake](Images/Week5-TCP-ThreeWayHandshake.png)
     - sync : i want to build connection with you
     - ack : ok, lets do it 
 
 - When closing connection => Half-close
-
-![HalfClose](Images/Week5-TCP-HalfClose.png)
+![HalfClose](Images/Week5-TCP-HalfClose.png)    
     - fin : I want to cut the connection with you
     - ack : ok, got it
     - **After HC1 B still can send packet to A, the whole connection broke when HC2 done**
 
 ## **Port Number**
 - Use to addressing in Transport Layer
-- Dominate by `IANA of ICANN`
+- Dominate by `IANA of ICANN` 
 - Publicly known port, Registered port, Dynamic port number
     - Publicly known port number : `0~1023`
         - normally servers, like `/etc/services`
     - Registered port number : `1024~49151`
         - mySQL, Redis
     - Dynamic port number : `49152~65525`
+- Client's port
+    1. Not conflict with others
+    2. Random choose
+    3. Common set in 1024~4096
 ### **Extra**
 #### **Why packet lost**
 1. Router busy: buffer full, throw the packet

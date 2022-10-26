@@ -55,7 +55,7 @@
 ### **Router**
 - Droptail
     - Queue management
-    - If buffer/queue already full, then drop the new packet
+    - If buffer/queue already full, then drop the new/in-coming packet
 - FIFO
     - Scheduling : which packet will be sending out
     - First in first out

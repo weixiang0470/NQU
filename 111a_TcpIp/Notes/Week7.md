@@ -26,15 +26,21 @@
 - CEUAPRSF
     - 8 bits = 1 byte
     - `C`
+        - Congestion Window Reduced 
+        - When received `E = 1` from receiver, will reduces congestion window and set to 1 (1 means had reduced)
     - `E`
+        - ECN Echo, when receiver's buffer full/busy, set to 1 (to let sender know the network is busy)
     - `U`
         - Urgent, 1 means is urgent(have priority)
         - 0 is normal, will just follow the queue
-        - ex: User close program before the program finish, this packet will set `U = 1`
+        - ex: User close program before the program finish, this packet will set `U = 1`.(will skip others packet and settle this)
     - `A`
         - First packet of Syn `A is 0`
         - 1 means Acknowledge Number is working.
     - `P`
+        - Push
+        - Normal packet will wait in the buffer until certain size then send to application layer.
+        - Set to 1 means this packet need to send to application layer ASAP, and no need to processed by TCP
     - `R`
         - Reset, disconnect the connection
         - ex: ACK=101, but next SN=999, then receiver will think is a suspicious connection, set R = 1 and disconnect the connection
@@ -46,8 +52,8 @@
     - To the the other knows the available buffer size
 - Checksum
     - 16 bits = 2 bytes
-    - Will use Pseudo Header to protect the TCP header
-    - Pseudo Header will include IP of Des and Source, and more...
+    - Will use **Pseudo Header** to protect the TCP header
+    - Pseudo Header will include Source IP, Destination IP, Protocol, TCP's length
     - Is a must
 - Urgent Pointer
     - 16 bits = 2 bytes

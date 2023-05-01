@@ -14,24 +14,34 @@
         - `w` : write and delete
         - `x` : executable
 - `ls -l test` (test is directory)
-    - `ls -l test` : Will only show the total file/directory of **test**
+    - `ls -l test` : Will only show the details of file/directory under **test**
     - `ls -l -d test` : Will give the information of the **test** directory
 - `ls -l -h`
     - File size will show in k, M, GB
 - `ls -a`
     - Show hidden file
 
+# ln
+- `ln -s data.txt slink` : link by symbolic link to data.txt and the link's name is slink
+- `ln data.txt hlink` : link by hard link to data.txt and the link's name is hlink
+
 # cp
 - Copy files and directories
 - `cp [source] [destination]`
     - `cp aa /tmp` : copy file **aa** to **/tmp**
-- `-r` : recursive(for directory) , `-f` : force , `-i` : query
+- `-r` : recursive(for directory) , `-f` : force , `-i` : inquery
+
+# rm
+- Remove files and directories
+- `rm file/directory`
+    - `rm a.txt` : remove a.txt
+- `-r` : recursive(for directory) , `-f` : force , `-i` : inquery
 
 # mv
 - move (rename) files
 - change file/directory's name
 - move file/directory
-- `-r` : recursive(for directory) , `-f` : force , `-i` : query
+- `-r` : recursive(for directory) , `-f` : force , `-i` : inquery
 
 # cd
 - Change directory
@@ -44,6 +54,7 @@
 
 # su
 - Change to super user permanently, use `exit` change back to normal user
+- `su - tom` : From user -> root -> tom
 
 # apt
 - For installation, use at **Ubuntu** and **Debian** series
@@ -102,11 +113,12 @@
     - Mix a.txt and b.txt into c.txt
 
 # more
+- `more /etc/passwd` : Will show content of /etc/passwd on terminal with pages
 - Only go to next page
-- Will have more information
 
 # less
-- Can go last page and next page
+- `less /etc/passwd` : Will show content of /etc/passwd on terminal with pages
+- Can go last page and next page, searching
 
 # head
 - `head -n 3 a.txt`
@@ -119,8 +131,18 @@
     - `-f` : Keep follow (listen)
 
 # stat
-- Display file's status
-- `stat a.txt` : Will show status(time information) of a.txt
+- `stat a.txt` : Can check a.txt file's detail information
+- Access (0664) : 
+    - 3 bits : SUID/SGID/SBIT 
+        - `s=4`(SUID) : 在使用時會暫時將使用者權限變成管理者權限,結束後會恢復一般權限
+            - ![SUID](Images/W10_SUID.png)
+        - `s=2`SGID : 使用時會變成擁有者的權限
+        - `t=1`SBIT : sticky bit,  防止刪除的屬性（只對目錄）, /tmp 下只有目錄建立者與root可以刪除該目錄
+            - ![SBIT](Images/W10_SBIT.png)
+    - `r=4` , `w=2` , `x=1`
+- Access time : 讀取時更改
+- Modify time : 修改內容時更改
+- Change time : 內容改變，屬性改變(chmod)都會更改
 
 # man
 - Manual
@@ -128,10 +150,11 @@
 - After enter manual, use `/-h` and enter will go to the **-h** place
 
 # whatis
-- Ask programming's API
+- Ask programming's API or command
 - `whatis open`
 	- open (2)  - describe 
     - `man 2 open` will give more specific manual of the specific "open"
+    - 2 is API
 
 # halt
 - `halt -p` : pause
@@ -139,6 +162,8 @@
 
 # touch
 - Can use to **create new empty file** and **renew file's timestamp**
+- `touch {a..d}` : Will create a,b,c,d files
+- `touch {a..d}{1..4}` : Will create a1,a2,a3,..,d2,d3,d4 files
 
 # chmod
 - Change permission of file, change file mode bits
@@ -152,7 +177,12 @@
 
 # hostname
 - Show hostname 
-- `hostnamectl set-hostname Jack` : change hostname to "Jack"
+- `hostnamectl set-hostname Jack` : Change hostname to "Jack"
+    - `bash` : Refresh changed
+
+# which
+- 找尋執行檔所在的位置
+- `which passwd` : Will show the location of "passwd" 
 
 # whoami
 - To know is which user(root/jack/user/...), print effective userid
@@ -171,22 +201,59 @@
 - Change new password for current user
 - `passwd tom` : Change password for tom
 
+# file
+- `file data.txt` : Show the type of **data.txt**
+    - ![file1](Images/W10_file1.png)
+- `file /usr/bin/passwd`
+    - ![file2](Images/W10_file2.png)
+    - 經過編譯的執行檔, 屬於 ARM aarch64 架構
+
+# dd
+- 產生大型檔案時使用
+- `dd if=/dev/zero of=3M bs=1M count=3`
+    - ![dd](Images/W10_dd.png)
+    - `if=/dev/zero` : 用 /dev/zero 的裝置來產生0
+    - `of=3M` : 檔案名稱為"3M"
+    - `bs=1M` : 一次產生 1M
+    - `count=3` : 產生3次
+
+# df
+- To show system's partition usage information
+- `df -h` : 使用k,M,G單位
+- `df -h | egrep /$ | awk '{print $5}' | tr "%" " " `
+    - ![df](Images/W10_df.png)
+    - `egrep /$` : 取出以‘/‘為結尾 
+        - `egrep` : regular expression
+    - `awk '{print 5}' `: 印出第5行
+    - `tr "%" " "` : 用空白取代 %
+
 # netstat
+- To check if the system's server executing
+- `netstat -tunlp | grep 22` : To check if port 22 working normally on this machine
 - `netstat -tunlp | grep 80`
     - `t` : tcp
 	- `u` : udp
 	- `l` : listen 狀態
 	- `p` : process
 	- `n` : 不解析
-    - `grep 80` : filter if have "80" 
+    - `grep 80` : filter if have **80**
 
 # exit
 - Exit root user to normal user
 
 # pstree
 - Show process list
-# dmesg 
-- Dump message
+
+# timedatectl
+- `timedatectl set-timezone Asia/Taipei` : 調整時區
+ 
+# ntpdate
+- Network time protocol date
+- `ntpdate tock.stdtime.gov.tw` ：去時間伺服器進行時間的矯正
+
+# dmesg
+- Dump message, can check system's information
+- `dmesg | more` : To check system's information with pages
 
 # Extra
 ## enp0s3

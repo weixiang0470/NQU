@@ -181,8 +181,13 @@
     - `bash` : Refresh changed
 
 # which
-- 找尋執行檔所在的位置
+- Search 執行檔 under environment variable "$PATH"
 - `which passwd` : Will show the location of "passwd" 
+
+# locate
+- Search in database, so need to update database before using it
+- `updatedb`, need to be root
+- `locate a.txt` : Will search everything with "a.txt"
 
 # whoami
 - To know is which user(root/jack/user/...), print effective userid
@@ -226,6 +231,17 @@
         - `egrep` : regular expression
     - `awk '{print 5}' `: 印出第5行
     - `tr "%" " "` : 用空白取代 %
+
+# xargs
+- Build and execute command lines from standard input
+- `find -name "*.txt" | rm`
+    - ![Without_Xargs](Images/W11_WithoutXargs.png)
+- `find -name "*.txt" | xargs rm`
+    - ![With_Xargs](Images/W11_WithXargs.png)
+
+# mkfifo
+- Make pipe line, ex: `mkfifo testfifo`, create a pipeline with the name "testfifo"
+- At terminal 1 `cat < testfifo` , at terminal 2 `echo "hello" > testfifo`
 
 # netstat
 - To check if the system's server executing

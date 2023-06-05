@@ -95,7 +95,7 @@
 - We have **file1**,**file2**,**file3** 
 - `tar cvfz BK0425.tar.gz ./*`
     - `c` : create
-    - `v` : 完整地顯示處理過程
+    - `v` : verbose(完整地顯示處理過程)
     - `f` : 指定檔名 `BK0425.tar.gz`
     - `z` : 要壓縮
     - `./*` : all file under this directory

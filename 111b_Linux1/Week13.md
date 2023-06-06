@@ -57,11 +57,11 @@
 - `df -h` : To check USB mounted on which directory
 - `umount /dev/sda1 /run/media/user/0B88-1660` : To unmount USB from VM
 - `df -h` : Check again is the USB was disappeared
-    - ![UmountUSB0](IMages/W13_UMountUSB0.png)
+    - ![UmountUSB0](Images/W13_UMountUSB0.png)
 
 ## **Step 2**
 - Disconnect USB from VM
-    - ![UmountUSB0](IMages/W13_UMountUSB1.png)
+    - ![UmountUSB0](Images/W13_UMountUSB1.png)
     - Done!
 
 # **CHAP 7**

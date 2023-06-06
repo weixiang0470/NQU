@@ -59,23 +59,23 @@
 
 - `find`
 	- `find . -name a.txt`
-		○ "." : Start from this directory, `find /root -name a.txt` : search from "/root" directory
-		○ "-name" : search by name 
+		- "." : Start from this directory, `find /root -name a.txt` : search from "/root" directory
+		- "-name" : search by name 
 	- `find -iname "a.txt"` : search without case sensitive
 	- `find -type d -name "htop*"`
-		○ `-type d` : directory
-		○ `-type p` : pipe
-		○ `-type l` : link
+		- `-type d` : directory
+		- `-type p` : pipe
+		- `-type l` : link
 	- `find . -type f -perm 0644`
-		○ `-type f` : file
-		○ `-perm 0644` : permission with 0644
+		- `-type f` : file
+		- `-perm 0644` : permission with 0644
 	- `find . -type f ! -perm 0644`
-		○ Find file that permission is not 0644, `!` : not
+		- Find file that permission is not 0644, `!` : not
 	- `find . -type f -name "*.txt" -exec rm {} \;`
-		○ `-exec` : execute the command after find 
-		○ `{}` : The result of find will put in here
-		○ `\;` : end
-		○ `find -type f -name "*.txt -exec chmod 755 {} \;`
+		- `-exec` : execute the command after find 
+		- `{}` : The result of find will put in here
+		- `\;` : end
+		- `find -type f -name "*.txt -exec chmod 755 {} \;`
 	- `find . -type f -empty -exec rm {} \;` : Delete empty files
 	- `rm -rf` : for directory
 	- `.*` : hidden file
@@ -85,9 +85,9 @@
 	- `-mmin` : 分鐘
 	- `-cnewer timebase` : change time newer than timebase 
 	- `-size` 
-		○ `-size 50M` : only 50M 
-		○ `-size -50M` : Smaller than 50M
-    - `-size +50M` : Bigger than 50M
+		- `-size 50M` : only 50M 
+		- `-size -50M` : Smaller than 50M
+        - `-size +50M` : Bigger than 50M
 
 ## **Backup**
 

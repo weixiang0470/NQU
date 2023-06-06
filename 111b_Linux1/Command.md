@@ -189,6 +189,38 @@
 - `updatedb`, need to be root
 - `locate a.txt` : Will search everything with "a.txt"
 
+# find
+- `find . -name a.txt`
+    - "." : Start from this directory, `find /root -name a.txt` : search from "/root" directory
+    - "-name" : search by name 
+- `find -iname "a.txt"` : search without case sensitive
+- `find -type d -name "htop*"`
+    - `-type d` : directory
+    - `-type p` : pipe
+    - `-type l` : link
+- `find . -type f -perm 0644`
+    - `-type f` : file
+    - `-perm 0644` : permission with 0644
+- `find . -type f ! -perm 0644`
+    - Find file that permission is not 0644, `!` : not
+- `find . -type f -name "*.txt" -exec rm {} \;`
+    - `-exec` : execute the command after find 
+    - `{}` : The result of find will put in here
+    - `\;` : end
+    - `find -type f -name "*.txt -exec chmod 755 {} \;`
+- `find . -type f -empty -exec rm {} \;` : Delete empty files
+- `rm -rf` : for directory
+- `.*` : hidden file
+- `-user` : use to specific user name
+- `-group` : user to specific group name
+- `-mtime -7/7/+7` : -7(7天內), 7(第7天), +7(存在7天以上), 天
+- `-mmin` : 分鐘
+- `-cnewer timebase` : change time newer than timebase 
+- `-size` 
+    - `-size 50M` : only 50M 
+    - `-size -50M` : Smaller than 50M
+    - `-size +50M` : Bigger than 50M
+
 # whoami
 - To know is which user(root/jack/user/...), print effective userid
 

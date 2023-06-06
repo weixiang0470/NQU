@@ -10,7 +10,7 @@
     - `setfacl -m m:r-- file1`
         - `m` : mask, is a protection, all user will do AND with mask
         - ![acl_mask](Images/W15_acl_mask.png)
-    - `setfacl -m g:rom:rw- file1`
+    - `setfacl -m g:tom:rw- file1`
 		- `g` : which group, in this case is tom
         - ![acl_group](Images/W15_acl_group.png)
     

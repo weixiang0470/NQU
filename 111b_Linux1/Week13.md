@@ -81,7 +81,7 @@
     - `-G` : Addition/attach group
     - `-d` : Specify home directory
     - `-e` : Expired date for the user
-    - `-u` : Spicify user id(UID)
+    - `-u` : Specify user id(UID)
 	- `useradd mike`
 		- 沒有參數就是用預設值 : 家目錄(/home/mike) , 群組(mike)
 
@@ -97,7 +97,7 @@
 		- `/home/mike` : home directory
 		- `/bin/bash` : shell
 	-  `…… :/sbin/nologin`
-		○ Shell 是`/sbin/nologin` 為系統帳號，不允許登錄
+		- Shell 是`/sbin/nologin` 為系統帳號，不允許登錄
 	- 一般使用者的uid是從1000開始(預設)
 	- Root id 是 0 
 

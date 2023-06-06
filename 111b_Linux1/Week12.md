@@ -13,7 +13,7 @@
 - `grep`
     - `-i` : without case sensitive(不區分大小寫)
     - `-n` : show row number(顯示行號)
-    - `-v target` : except **target** (除了target以為都要)
+    - `-v target` : except **target** (除了target以外都要)
     - `-r` : recursively (遞回搜尋所有的資料夾與子資料夾)
 	- `-A 1` : after 1 row(多顯示目標後一行)
     - `-B 2` : before 2 row(多顯示目標前兩行)
@@ -34,7 +34,7 @@
         - `grep -A 1 "abc" a.txt` : 匹配a.txt中"abc"與之後的一行
         - `grep -B 1 "abc" a.txt` : 匹配a.txt中"abc"與之前的一行
     - user to grep specific file's name
-        - `ls /etc | grep netowkr`
+        - `ls /etc | grep network`
 
 ### **正則表達式**
 - Normally use to mach the content of the file(針對檔案裡面的內容在做匹配)
@@ -42,20 +42,20 @@
     - Ex : `grep "a*" a.txt, will show a,aa,aaa, but not b,c,bb,...
 - `?` : 匹配前面的元素/子表達式 0次 或 1次
 - `+` : 匹配前面的元素/子表達式 1次 或 多次
-    ○ Ex : `grep "^ab+" a.txt` , **+** grep 看不懂需要用 **egrep**(extended grep)
-    ○ Ex: `egep "^ab+" a.txt` , OK
+    - Ex : `grep "^ab+" a.txt` , **+** grep 看不懂需要用 **egrep**(extended grep)
+    - Ex: `egep "^ab+" a.txt` , OK
 - `^` :  head, 以什麼為開頭
-    ○ Ex : `cat /etc/passwd | grep "^root"`
+    - Ex : `cat /etc/passwd | grep "^root"`
 - `$` : 以什麼為結尾
-    ○ Ex: `cat /etc/passwd | grep "nologin$"
-        § nologin 為系統帳號
-    ○ `cat /etc/passwd | grep "nologin$" | wc -l` 
-        § 有多少個系統帳號
+    - Ex: `cat /etc/passwd | grep "nologin$"`
+        - `nologin` 為系統帳號
+    - `cat /etc/passwd | grep "nologin$" | wc -l` 
+        - 有多少個系統帳號
 - `[]` : 用來定義字符組
-    ○ Ex : `grep "^[aA]"` : 匹配 a 或 A 開頭
-    ○ Ex:  `grep "a[0-9]"` : 匹配a0,a1,…,a9
-    ○ [a-z] : a,b,c,…,x,y,z
-    ○ [A-Z]: A,B,C,…,X,Y,Z
+    - Ex : `grep "^[aA]"` : 匹配 a 或 A 開頭
+    - Ex:  `grep "a[0-9]"` : 匹配a0,a1,…,a9
+    - [a-z] : a,b,c,…,x,y,z
+    - [A-Z] : A,B,C,...,X,Y,Z
 - `|` : 或
     - Ex : `grep "ab|ac" a.txt` , 匹配 "ab" or "ac"
 

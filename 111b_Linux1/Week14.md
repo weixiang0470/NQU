@@ -17,7 +17,7 @@ _**建立directory add `-p`, 如果資料夾不存在,則創建資料夾,如果�
 		- `rm a.txt` , `rm -r subdir2`
 		- `mv a.txt b.txt` , `mv subdir2 subdir3`
         - ![r_permission](Images/W14_w_permission.png)
-            - Can **modify file** under directory, but can't change file's name, add and delete file under directory 
+            - Can **modify file's content** under directory, but can't change file's name, add and delete file under directory 
 	- 如果目錄權限沒有w,就無法刪除檔案....但這只是對一般使用者,管理者(root)還是可以照常刪除
 
 - `chown`
@@ -53,7 +53,7 @@ _**建立directory add `-p`, 如果資料夾不存在,則創建資料夾,如果�
     - Can do other input/command
 - `cat /proc/cpuinfo` : check cpu's information
 - `cat /proc/meminfo` : check memory's information
-    - `free -h` : To check memory;s usage information
+    - `free -h` : To check memory's usage information
 
 ## **ps**
 - `ps`

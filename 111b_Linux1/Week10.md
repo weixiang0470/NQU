@@ -85,7 +85,7 @@
 - Windows
     - `.exe` or `.bat`
 - Linux
-    - 	- Depend on the executable permission (x)
+    - Depend on the executable permission (x)
     - `chmod +x a.txt` : Give executable permission to a.txt
     - `/root/user/a.txt` : Execute **a.txt** under **/root/user/** directory (absolute path)
     - `./a.txt` : Execute **a.txt** under current directory

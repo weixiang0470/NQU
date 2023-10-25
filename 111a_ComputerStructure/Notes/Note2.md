@@ -1,1 +1,0 @@
-`iverilog -o output_filename.out input_filename.v`

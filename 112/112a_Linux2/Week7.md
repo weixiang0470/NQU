@@ -66,7 +66,12 @@ alias zgrep='zgrep --color=auto'
 - `$HOME` : current user's home directory
 - `$IFS` : Default seperation sign
 - `$PATH` : all path of executable command
+    - `/home/user/.bashrc` : PATH for the user
+    - `/etc/profile` : PATH for all user
 - `$USER` : Show current user
     - `[[ $USER == 'root' ]]&&echo 1||echo 0`
     - ![shell03](Img/W7/shell03.png)
 - `$UID` : Show current user's id
+- `$HISTFILE` : The file that store the history command
+- `$RANDOM` : return a random value between 0~32767
+- `env` : Will show all system variable 

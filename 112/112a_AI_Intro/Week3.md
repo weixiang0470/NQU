@@ -17,3 +17,5 @@ Cross-Validation(10 folds)
 - Seperate all data into 10 folds
 - Each fold take turn to be test-data, others will be training-data
 - Take average of all result as output
+- Need to have large data
+

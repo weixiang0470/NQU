@@ -6,11 +6,14 @@
     - 3元找3個，剩0
 
 Graph
-- 畫圖
+- ![sample_graph](Img/w8/graph0.png)
+- 表示法：相鄰矩陣，相鄰串列
+- 相鄰串列表示法
+    - ![N_link](Img/w8/N_link.png)
+- 相鄰矩陣表示法
+    - ![N_2dArray](Img/w8/N_2dArray.png)
 - Minimal Spanning Tree
     - Prims
-        - 設定起始點，然後逐步擴張
-        - 畫圖
+        - 設定起始點，然後逐步擴張,從最小的開始加入
     - Kruskal
         - 將所有的邊按權值從小到大排序，然後從最小的邊開始加入，但若形成迴圈就看下一個直到結束
-        - 畫圖

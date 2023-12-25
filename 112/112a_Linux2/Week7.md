@@ -47,20 +47,24 @@ alias zgrep='zgrep --color=auto'
 
 # **Make new command share to all terminal**
 1. Edit file `vim ~/.bashrc` : 
-    - `vim /etc/profile` : need to be root， 套用到整個系統的使用者
+    - `vim /etc/profile` : need to be root， for all users in the system(套用到整個系統的使用者)
 2. Renew bash
-    - `source .bashrc`
-    - `. .bashrc`
-    - Close and open new terminal
+    - `source ~/.bashrc`
+    - `. ~/.bashrc`
+    - Close and open terminal
 
 # **Terminal/Shell command**
+- `bash`
+    - Create a new bash(child)
+    - ![bash](Img/W7/bash.png)
+- `echo $$` : Show the pid of the bash
 - `a=Xiang`
     - `echo "Hi $a"` : Will show **Hi Xiang**
     - `echo 'Hi $a` : Will show **Hi $a**
     - ![shell01](Img/W7/shell01.png)
 - echo
     - `echo "Hello\tWorld"`
-    - `echo -e "Hello\tWorld"` : need to add `-e` parameter to let `\t` works
+    - `echo -e "Hello\tWorld"` : need to add `-e` parameter to let `\t`(\r\n) works
     - ![shell02](Img/W7/shell02.png)
     - `-n` : new line
 - `$HOME` : current user's home directory

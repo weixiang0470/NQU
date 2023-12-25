@@ -3,6 +3,9 @@
 - `sudo yum install mariadb-server mariadb`
 - `sudo systemctl start mariadb`
 - `sudo mysql_secure_installation` : Setting mariadb 
+    - Remove anonmous user -> Y
+    - Disallow root -> n
+    - set new password
 - `mysql -u root -p -h localhost` : Login into mariadb
     - `-u` : user account
     - `-p` : Enter password later

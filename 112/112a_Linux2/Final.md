@@ -313,7 +313,6 @@ AllowOverride AuthConfig
     - ![success](Img/W10/success.png)
 
 # **FTP server**
-- windows & linux different : 4.04 pm
 ## **Step 0 : Install ftp command**
 - `sudo yum -y install ftp`
 ## **Step 1 : Install ftp server**
@@ -322,4 +321,5 @@ AllowOverride AuthConfig
 - `gedit /etc/vsftpd/vsftpd.conf`
     - ![anonymous01](Img/W15/anonymous01.png)
 - Login with username **anonymous** and password **abc@gmail.com**
+- `systemctl restart vsftpd`
 - ![anonymous02](Img/W15/anonymous02.png)

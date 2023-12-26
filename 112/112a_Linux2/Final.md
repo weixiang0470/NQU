@@ -223,7 +223,7 @@ if($result->num_rows>0){
 
 # **Limit ip address to connect**
 ## **Step 1 : Create a htm file under the target limit folder**
-![limit01](Img/W15/limit01.png)
+
 - `cd /var/www/html`
 - `mkdir limit`
 - `cd limit`

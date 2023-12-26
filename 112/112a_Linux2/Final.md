@@ -224,6 +224,10 @@ if($result->num_rows>0){
 # **Limit ip address to connect**
 ## **Step 1 : Create a htm file under the target limit folder**
 ![limit01](Img/W15/limit01.png)
+- `cd /var/www/html`
+- `mkdir limit`
+- `cd limit`
+- `echo "ShengJie is idoit" > lm.htm`
 ## **Step 2 : Edit the configuration file for httpd**
 - `vim /etc/httpd/conf/httpd.conf`
 - ![limit02](Img/W15/limit02.png)
@@ -307,3 +311,15 @@ AllowOverride AuthConfig
 3. Connect VPN
 4. 連線成功會多出一個 ppp 介面卡
     - ![success](Img/W10/success.png)
+
+# **FTP server**
+- windows & linux different : 4.04 pm
+## **Step 0 : Install ftp command**
+- `sudo yum -y install ftp`
+## **Step 1 : Install ftp server**
+- `sudo yum -y install vsftpd`
+## **anonymous login**
+- `gedit /etc/vsftpd/vsftpd.conf`
+    - ![anonymous01](Img/W15/anonymous01.png)
+- Login with username **anonymous** and password **abc@gmail.com**
+- ![anonymous02](Img/W15/anonymous02.png)

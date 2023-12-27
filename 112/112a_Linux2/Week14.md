@@ -19,7 +19,6 @@
     - ![https02](Img/W14/https02.jpeg)
 
 # **/etc/httpd/conf/httpd.conf**
-- video
 - `Options Indexes` : Will show all and allow access files in the directory
 - `Options Indexes FollowSymLinks` : Will allow access file having soft link, access to the linked file
 - Limits IP address

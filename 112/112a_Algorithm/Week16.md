@@ -16,7 +16,7 @@ $$ \int^{b}_{a}{f(x)*g(x)} dx = 0$$
 
 矩陣
 - $[A] \cdot \vec{x} = \lambda \vec{x}$
-- 畫圖
+- ![matrix](Img/w16/matrix.png)
 
 回歸禰合
-- 畫圖
+- ![linear](Img/w16/linear.png)

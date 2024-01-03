@@ -1,0 +1,30 @@
+Tester:     weka.experiment.PairedCorrectedTTester -G 4,5,6 -D 1 -R 2 -S 0.05 -result-matrix "weka.experiment.ResultMatrixCSV -mean-prec 2 -stddev-prec 0 -col-name-width 0 -row-name-width 25 -mean-width 2 -stddev-width 2 -sig-width 1 -count-width 0 -print-row-names -enum-col-names"
+Analysing:  Percent_correct
+Datasets:   6
+Resultsets: 9
+Confidence: 0.05 (two tailed)
+Sorted by:  -
+Date:       12/30/23, 12:27 PM
+
+
+Dataset,[1],[2],'',[3],'',[4],'',[5],'',[6],'',[7],'',[8],'',[9],''
+iris,33.33,92.53,v,96.27,v,95.40,v,95.40,v,95.53,v,94.73,v,94.67,v,96.93,v
+breast-cancer,70.30,66.91,' ',69.52,' ',72.85,' ',71.62,' ',72.70,' ',74.28,' ',69.74,' ',66.95,' '
+german_credit,70.00,65.91,*,75.09,v,71.88,' ',71.27,' ',75.16,v,71.25,' ',76.39,v,71.71,' '
+pima_diabetes,65.11,71.52,v,76.80,v,70.62,v,74.92,v,75.75,v,74.49,v,76.05,v,74.75,v
+Glass,35.51,57.40,v,57.36,v,69.95,v,44.89,v,49.45,v,67.58,v,79.58,v,67.32,v
+ionosphere,64.10,82.28,v,88.07,v,87.10,v,90.89,v,82.17,v,89.74,v,93.51,v,91.06,v
+'[v/ /*]','','',[4/1/1],'',[5/1/0],'',[4/2/0],'',[4/2/0],'',[5/1/0],'',[4/2/0],'',[5/1/0],'',[4/2/0]
+
+
+Key,
+[1],'rules.ZeroR \'\' 48055541465867954'
+[2],'rules.OneR \'-B 6\' -3459427003147861443'
+[3],'functions.SMO \'-C 1.0 -L 0.001 -P 1.0E-12 -N 0 -V -1 -W 1 -K \\\"functions.supportVector.PolyKernel -E 1.0 -C 250007\\\" -calibrator \\\"functions.Logistic -R 1.0E-8 -M -1 -num-decimal-places 4\\\"\' -6585883636378691736'
+[4],'lazy.IBk \'-K 1 -W 0 -A \\\"weka.core.neighboursearch.LinearNNSearch -A \\\\\\\"weka.core.EuclideanDistance -R first-last\\\\\\\"\\\"\' -3080186098777067172'
+[5],'meta.AdaBoostM1 \'-P 100 -S 1 -I 10 -W trees.DecisionStump\' -1178107808933117974'
+[6],'bayes.NaiveBayes \'\' 5995231201785697655'
+[7],'trees.J48 \'-C 0.25 -M 2\' -217733168393644444'
+[8],'trees.RandomForest \'-P 100 -I 100 -num-slots 1 -K 0 -M 1.0 -V 0.001 -S 1\' 1116839470751428698'
+[9],'functions.MultilayerPerceptron \'-L 0.3 -M 0.2 -N 500 -V 0 -S 0 -E 20 -H a\' -5990607817048210779'
+

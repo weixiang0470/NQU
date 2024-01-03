@@ -27,7 +27,7 @@ Classify 面板
             - Resize costMatrix
 
 
-簡介
+簡介（前言）
 - 為什麼要做
 - 有什麼影響
 
@@ -45,3 +45,10 @@ Classify 面板
 結論
 
 參考文獻
+
+
+SHAP
+- Global interpretation
+    - 哪些因子影響最多
+- local interpretation
+    - 會中風，不會中風，最可能是什麼值（原因）

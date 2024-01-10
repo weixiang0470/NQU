@@ -9,13 +9,13 @@
 ![mlp](Img/final/mlp01.png)
 - $y = f(w_b+ w_1x_1+w_2x_2+...+w_nx_n)$
 
-$$
+$
 f = 
-\begin{cases}
-1, & \text {if $w_b+ w_1x_1+w_2x_2+...+w_nx_n \ge 0$} 
-\\[2ex]
-0, & \text{if $w_b+ w_1x_1+w_2x_2+...+w_nx_n \lt 0$} \end{cases} 
-$$
+\begin{cases}^
+{1, \ \ \ \ {if w_b+ w_1x_1+w_2x_2+...+w_nx_n \ge 0}}
+_{0, \ \ \ \ {if w_b+ w_1x_1+w_2x_2+...+w_nx_n \lt 0}}
+\end{cases} 
+$
 
 ## Examples
 ### Ex1

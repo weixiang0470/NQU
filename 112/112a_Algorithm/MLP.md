@@ -8,7 +8,7 @@
 
 ![mlp](Img/final/mlp01.png)
 - $y = f(w_b+ w_1x_1+w_2x_2+...+w_nx_n)$
-- $f = {\{}^{1, w_b+ w_1x_1+w_2x_2+...+w_nx_n \gt 0}_{0, w_b+ w_1x_1+w_2x_2+...+w_nx_n \le 0}$  
+- $f = \{^{1, w_b+ w_1x_1+w_2x_2+...+w_nx_n \gt 0}_{0, w_b+ w_1x_1+w_2x_2+...+w_nx_n \le 0}$  
 ## Examples
 ### Ex1
 ![ex1-01](Img/final/ex1-01.png)

@@ -8,7 +8,9 @@
 
 ![mlp](Img/final/mlp01.png)
 - $y = f(w_b+ w_1x_1+w_2x_2+...+w_nx_n)$
-- $f = \{^{1, w_b+ w_1x_1+w_2x_2+...+w_nx_n \gt 0}_{0, w_b+ w_1x_1+w_2x_2+...+w_nx_n \le 0}$  
+
+$$ f= \begin{cases} 1, & \text {if $w_b+ w_1x_1+w_2x_2+...+w_nx_n \ge 0$} \\ 0, & \text{if $w_b+ w_1x_1+w_2x_2+...+w_nx_n \lt 0$} \end{cases} $$
+
 ## Examples
 ### Ex1
 ![ex1-01](Img/final/ex1-01.png)
@@ -23,7 +25,8 @@
 - Graph in **Perceptron**
 
 
-$$f = {\{}^{1, -0.5 + 1*x_1+1*x_2 \gt 0}_{0, -0.5+ 1*x_1+1*x_2 \le 0}$$
+$$ f= \begin{cases} 1, & \text {if $w_b+ w_1x_1+w_2x_2+...+w_nx_n \ge 0$} \\ 0, & \text{if $w_b+ w_1x_1+w_2x_2+...+w_nx_n \lt 0$} \end{cases} $$
+
 - We can use the function $f$ to seperate into 2 class, indicate with 1 and 0
 - $A(0,1) \to f((0,1)) = f(-0.5+1*(0)+1*(1)) = f(0.5) = 1$ 
 - $A(1,1) \to f((1,1)) = f(-0.5+1*(1)+1*(1)) = f(1.5) = 1$

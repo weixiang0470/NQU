@@ -43,7 +43,7 @@ Docker
 
 代數
 - 複數
-    - ![complex](Img/w15_complex.png)
+    - ![complex](Img/w15complex.png)
         - $e^{bi} = cos(b) + i*sin(b)$
         - $e^{a+bi} = e^a * e^{bi}$
         - $e^{a+bi} = e^a * (cos(b) + i*sin(b))$

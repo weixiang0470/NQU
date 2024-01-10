@@ -8,8 +8,7 @@
 
 ![mlp](Img/final/mlp01.png)
 - $y = f(w_b+ w_1x_1+w_2x_2+...+w_nx_n)$
-
-- $f = \begin{cases}^{1, if w_b+ w_1x_1+w_2x_2+...+w_nx_n \ge 0}_{0, if w_b+ w_1x_1+w_2x_2+...+w_nx_n \lt 0 }\end{cases} $
+- ![activate_function](Img/final/activate_function.png)
 
 ## Examples
 ### Ex1
@@ -25,7 +24,7 @@
 - Graph in **Perceptron**
 
 
-$$ f= \begin{cases} 1, & \text {if $w_b+ w_1x_1+w_2x_2+...+w_nx_n \ge 0$} \\ 0, & \text{if $w_b+ w_1x_1+w_2x_2+...+w_nx_n \lt 0$} \end{cases} $$
+![activate_function](Img/final/activate_function.png)
 
 - We can use the function $f$ to seperate into 2 class, indicate with 1 and 0
 - $A(0,1) \to f((0,1)) = f(-0.5+1*(0)+1*(1)) = f(0.5) = 1$ 
